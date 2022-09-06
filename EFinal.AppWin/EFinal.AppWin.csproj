@@ -83,5 +83,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EFinal.Dominio\EFinal.Dominio.csproj">
+      <Project>{7d146a96-dfbe-4bf8-bb83-41908b07d976}</Project>
+      <Name>EFinal.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFinal.Logic\EFinal.Logic.csproj">
+      <Project>{ec422d33-449a-4731-aa9e-598959143a13}</Project>
+      <Name>EFinal.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
