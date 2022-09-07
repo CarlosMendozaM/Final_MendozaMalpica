@@ -31,7 +31,7 @@ namespace EFinal.AppWin
             }
             else
             {
-                exito = PrestamoBL.Actualizar(prestamo);
+                exito = PrestamoBL.Insertar(prestamo);
             }
             if (exito)
             {

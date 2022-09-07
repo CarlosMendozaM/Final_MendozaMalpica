@@ -35,11 +35,6 @@ namespace EFinal.Logic
             return true;
         }
 
-        public static bool Actualizar(Prestamo prestamo)
-        {
-            return true;
-        }
-
         private static DateTime calcularVencimiento(DateTime fecha)
         {
             if (fecha.Day != DateTime.DaysInMonth(fecha.Year, fecha.Month))
@@ -50,6 +45,12 @@ namespace EFinal.Logic
             {
                 return fecha.AddDays(1).AddMonths(1).AddDays(-1);
             }
+        }
+
+        public static List<Prestamo> Listar()
+        {
+            var prestamoData = new PrestamoData();
+            return prestamoData.Listar();
         }
     }
 }

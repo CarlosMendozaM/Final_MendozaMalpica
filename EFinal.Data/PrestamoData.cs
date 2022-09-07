@@ -9,7 +9,7 @@ namespace EFinal.Data
 {
     public class PrestamoData
     {
-        string cadenaConexion = "Server=localhost; DataBase=FINANCIERA; Integrated security=true";
+        string cadenaConexion = "Server=localhost; DataBase=Final; Integrated security=true";
         public bool Insertar(Prestamo prestamo, List<DetallePrestamo> detalles)
         {
             using (var transaccion = new TransactionScope())
@@ -28,7 +28,8 @@ namespace EFinal.Data
                     }
                     sql = "INSERT INTO Prestamo (Numero, Fecha, IdCliente, Importe," +
                                 "Tasa, Plazo, FechaDeposito, Estado) " +
-                          "VALUES (@Numero, @Fecha, @IdCliente, @Importe, " +                                "@Tasa, @Plazo, @FechaDeposito, @Estado);" +
+                          "VALUES (@Numero, @Fecha, @IdCliente, @Importe, " +
+                                "@Tasa, @Plazo, @FechaDeposito, @Estado);" +
                           "SELECT ISNULL(@@IDENTITY,0);";
                     using (var comando = new SqlCommand(sql, conexion))
                     {
@@ -45,7 +46,8 @@ namespace EFinal.Data
                     }
                     sql = "INSERT INTO DetallePrestamo (IdPrestamo, NumeroCuota," +
                                 "ImporteCuota, FechaVencimiento, Estado) " +
-                          "VALUES (@IdPrestamo, @NumeroCuota, @ImporteCuota, " +                                "@FechaVencimiento, @Estado)";
+                          "VALUES (@IdPrestamo, @NumeroCuota, @ImporteCuota, " +
+                                "@FechaVencimiento, @Estado)";
                     foreach (var detalle in detalles)
                     {
                         detalle.IdPrestamo = prestamo.ID;
@@ -65,5 +67,33 @@ namespace EFinal.Data
             }
             return true;
         }
+        string cadenaconexion = "Server=localhost; DataBase=Final; Integrated security=true";
+        public List<Prestamo> Listar()
+        {
+            var listado = new List<Prestamo>();
+            using (var conexion = new SqlConnection(cadenaconexion))
+            {
+                conexion.Open();
+                using (var comando = new SqlCommand("SELECT * FROM Prestamo", conexion))
+                {
+                    using (var lector = comando.ExecuteReader())
+                    {
+                        if (lector != null && lector.HasRows)
+                        {
+                            Prestamo tipo;
+                            while (lector.Read())
+                            {
+                                tipo = new Prestamo();
+                                tipo.ID = int.Parse(lector[0].ToString());
+                                tipo.Numero = lector[1].ToString();
+                                listado.Add(tipo);
+                            }
+                        }
+                    }
+                }
+            }
+            return listado;
+        }
+
     }
 }
