@@ -61,16 +61,16 @@ namespace EFinal.AppWin
 
         private void frmConsultaPrestamo_Load(object sender, EventArgs e)
         {
-            cargarDatos2();
+            //    cargarDatos2();
         }
-        private void cargarDatos2()
-        {
-            var listado = PrestamoBL.Listar();
-            dgvListado.Rows.Clear();
-            foreach (var cliente in listado)
-            {
-                dgvListado.Rows.Add(prestamo.ID, prestamo.Numero, prestamo.Fecha, prestamo.Importe);
-            }
-        }
+        //private void cargarDatos2()
+        //{
+        //    var listado = PrestamoBL.Listar();
+        //    dgvListado.Rows.Clear();
+        //    foreach (var cliente in listado)
+        //    {
+        //        dgvListado.Rows.Add(prestamo.ID, prestamo.Numero, prestamo.Fecha, prestamo.Importe);
+        //    }
+        //}
     }
 }
