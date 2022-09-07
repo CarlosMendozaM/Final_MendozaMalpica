@@ -32,9 +32,8 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.dgvListado = new System.Windows.Forms.DataGridView();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -66,27 +65,28 @@
             this.toolStripButton2.Text = "VerDetalle";
             this.toolStripButton2.Click += new System.EventHandler(this.verDetalle);
             // 
-            // dgvListado
+            // btnConsulta
             // 
-            this.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListado.Location = new System.Drawing.Point(12, 28);
-            this.dgvListado.Name = "dgvListado";
-            this.dgvListado.Size = new System.Drawing.Size(485, 400);
-            this.dgvListado.TabIndex = 2;
+            this.btnConsulta.Location = new System.Drawing.Point(153, 200);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(162, 41);
+            this.btnConsulta.TabIndex = 4;
+            this.btnConsulta.Text = "Consultar Prestamo";
+            this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // frmPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 440);
+            this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dgvListado);
             this.Name = "frmPrestamo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Prestamo";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,6 +97,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.DataGridView dgvListado;
+        private System.Windows.Forms.Button btnConsulta;
     }
 }

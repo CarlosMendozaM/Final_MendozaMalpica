@@ -17,8 +17,9 @@ namespace EFinal.AppWin
     {
         Prestamo prestamo;
 
-        public frmConsultaPrestamo()
+        public frmConsultaPrestamo(Prestamo prestamo)
         {
+            this.prestamo = prestamo;
             InitializeComponent();
         }
 
@@ -61,16 +62,16 @@ namespace EFinal.AppWin
 
         private void frmConsultaPrestamo_Load(object sender, EventArgs e)
         {
-            //    cargarDatos2();
+            cargarDatos2();
         }
-        //private void cargarDatos2()
-        //{
-        //    var listado = PrestamoBL.Listar();
-        //    dgvListado.Rows.Clear();
-        //    foreach (var cliente in listado)
-        //    {
-        //        dgvListado.Rows.Add(prestamo.ID, prestamo.Numero, prestamo.Fecha, prestamo.Importe);
-        //    }
-        //}
+        private void cargarDatos2()
+        {
+            var listado = PrestamoBL.Listar();
+            dgvListado.Rows.Clear();
+            foreach (var cliente in listado)
+            {
+                dgvListado.Rows.Add(prestamo.ID, prestamo.Numero, prestamo.Fecha, prestamo.Importe);
+            }
+        }
     }
 }

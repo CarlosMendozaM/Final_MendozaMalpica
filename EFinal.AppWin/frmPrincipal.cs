@@ -26,7 +26,7 @@ namespace EFinal.AppWin
 
         private void abrirPrestamo(object sender, EventArgs e)
         {
-            var frm = new frmConsultaPrestamo();
+            var frm = new frmPrestamo();
             frm.MdiParent = this;
             frm.Show();
         }

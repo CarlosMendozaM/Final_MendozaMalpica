@@ -16,7 +16,7 @@ namespace EFinal.AppWin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmConsultaPrestamo());
+            Application.Run(new frmPrincipal());
         }
     }
 }

@@ -35,5 +35,12 @@ namespace EFinal.AppWin
             var frm = new frmPrestamoEdit(prestamo);
             frm.ShowDialog();
         }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            var consulta = new Prestamo();
+            var frm = new frmConsultaPrestamo(consulta);
+            frm.ShowDialog();
+        }
     }
 }
