@@ -49,6 +49,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClienteEditcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClienteEditcs.Designer.cs">
+      <DependentUpon>frmClienteEditcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaPrestamo.Designer.cs">
+      <DependentUpon>frmConsultaPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuotas.Designer.cs">
+      <DependentUpon>frmCuotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrestamo.Designer.cs">
+      <DependentUpon>frmPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrestamoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrestamoEdit.Designer.cs">
+      <DependentUpon>frmPrestamoEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +93,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClienteEditcs.resx">
+      <DependentUpon>frmClienteEditcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaPrestamo.resx">
+      <DependentUpon>frmConsultaPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuotas.resx">
+      <DependentUpon>frmCuotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestamo.resx">
+      <DependentUpon>frmPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestamoEdit.resx">
+      <DependentUpon>frmPrestamoEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
